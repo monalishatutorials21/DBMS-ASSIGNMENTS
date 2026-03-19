@@ -1,84 +1,122 @@
-# DBMS Lab Assignment – 1  
-(SQL DDL and DML Commands)
+# 📊 DB-Lab-6: Data Aggregation using GROUP BY and HAVING
+
+![Oracle](https://img.shields.io/badge/Database-Oracle%2021c-red)
+![SQL](https://img.shields.io/badge/Language-SQL-blue)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 ---
 
-## 📌 Overview
-This repository contains the complete solution for **DBMS Lab Assignment – 1**.  
-The objective of this assignment is to understand and implement fundamental **SQL concepts**, including database creation, table manipulation, and data operations using **DDL (Data Definition Language)** and **DML (Data Manipulation Language)** commands.
+## 🎯 Objective
 
-
+To understand and implement SQL aggregate functions along with **GROUP BY** and **HAVING** clauses for summarizing and analyzing relational data without modifying stored data.
 
 ---
 
-## 🎯 Objectives of the Assignment
-- To understand the structure of a relational database  
-- To learn how to create and modify database tables  
-- To perform data insertion, retrieval, update, and deletion  
-- To practice writing clean and well-documented SQL queries  
+## 🛠️ Tools & Technologies
+
+* Oracle 21c Express Edition
+* SQL*Plus / VS Code
+* SQL Language
 
 ---
 
-## 🧾 Assignment Description
+## 📂 Database Schema
 
-### 🔹 Part A: DDL (Data Definition Language)
-- Creation of database
-- Creation of tables
-- Altering table structure
-- Renaming columns
-- Dropping tables
+The lab uses the following tables:
 
-### 🔹 Part B: DML (Data Manipulation Language)
-- Inserting records
-- Retrieving data using SELECT queries
-- Updating records
-- Deleting records
+* **Student**
+* **Faculty**
+* **Course**
+* **Department**
+* **Enrollment**
+
+These tables are related using foreign keys to simulate a **college management system**.
 
 ---
 
-## 📂 Files Included
-- lab1_solution.sql  → Contains all SQL commands with comments & question numbers
-- DB-Lab-1.pdf       → Question paper provided for the lab assignment
-- README.md          → Detailed explanation of the assignment
-  
----
+## 📌 Concepts Covered
 
-## ▶️ How to Execute the SQL File
-1. Open **Oracle SQL Developer / MySQL / any SQL-supported DB tool**
-2. Create a new database connection
-3. Open the file `lab1_solution.sql`
-4. Execute the queries:
-   - Either **step by step**, or
-   - **All at once**, depending on the DB tool
-5. Verify the output after each query execution
+* Aggregate Functions (`COUNT`, `SUM`, `AVG`, `MAX`, `MIN`)
+* GROUP BY clause
+* HAVING clause
+* GROUP BY with multiple columns
+* Aggregation with JOIN operations
 
 ---
 
-## 📝 Important Notes
-- Database name used in this assignment: **CollegeDB**
-- SQL queries are written using **standard SQL syntax**
-- Each query is clearly labeled with the **corresponding question number**
-- Proper comments are added for clarity and understanding
-- The assignment follows all lab submission guidelines strictly
+## 🧪 Lab Questions Overview
+
+### 🔹 Part A: Basic Aggregate Queries
+
+* Total number of students, faculty, courses
+* Maximum and minimum credits
+
+### 🔹 Part B: GROUP BY on Single Tables
+
+* Grouping students, faculty, courses by department
+* Enrollment analysis by semester and grade
+
+### 🔹 Part C: GROUP BY with HAVING
+
+* Filtering grouped results using conditions
+
+### 🔹 Part D: Aggregation with JOIN
+
+* Combining multiple tables for meaningful insights
+
+### 🔹 Part E: Analytical Queries
+
+* Advanced queries like maximum grade per course
+* Course and department analysis
 
 ---
 
+## ▶️ How to Run
 
+1. Open **VS Code** or **SQL*Plus**
+2. Create a file:
+
+   ```bash
+   lab6.sql
+   ```
+3. Paste the SQL script
+4. Run the file using:
+
+   ```sql
+   @lab6.sql
+   ```
 
 ---
 
-## 👤 Student Details
-- **Name:** Alok Kumar  
-- **Roll No:** 23425
-- **Reg. No:** 23105128017
-- **Branch :** CSE 
-- **College:** BPMCE,Madhepura 
-- **Session:** 2023–2027  
+## 📊 Sample Query
+
+```sql
+SELECT Department_ID, COUNT(*) AS Total_Students
+FROM Student
+GROUP BY Department_ID;
+```
 
 ---
 
-## 📌 Conclusion
-This assignment helped in understanding the practical usage of SQL commands for managing databases and tables.  
-It provides a strong foundation for working with relational databases in future DBMS applications.
+## 📈 Output
+
+The output will display:
+
+* Grouped data summaries
+* Counts of students, courses, and faculty
+* Filtered results using HAVING clause
+
+---
+
+## 🎓 Learning Outcome
+
+After completing this lab, you will be able to:
+
+* Perform data aggregation using SQL
+* Analyze grouped data efficiently
+* Use HAVING for filtering aggregated results
+* Combine tables using JOIN with GROUP BY
+
+
 
 
