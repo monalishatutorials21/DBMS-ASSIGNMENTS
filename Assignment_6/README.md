@@ -17,7 +17,6 @@ To understand and implement SQL aggregate functions along with **GROUP BY** and 
 * Oracle 21c Express Edition
 * SQL*Plus / VS Code
 * SQL Language
-
 ---
 
 ## 📂 Database Schema
